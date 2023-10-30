@@ -9,6 +9,7 @@ import NextAuth from "next-auth";
 import { db, tableCreator } from "@kopenkinda/db";
 
 export type { Session } from "next-auth";
+export type EnabledProviders = "discord";
 
 declare module "next-auth" {
   interface Session {
