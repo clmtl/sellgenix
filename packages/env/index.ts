@@ -10,7 +10,9 @@ if (process.env.DATABASE_URL === undefined) {
 }
 
 export const env = createEnv({
-  client: {},
+  client: {
+    NEXT_PUBLIC_POSTHOG_API_KEY: z.string(),
+  },
   server: {
     AUTH_DISCORD_ID: z.string().min(1),
     AUTH_DISCORD_SECRET: z.string().min(1),
@@ -34,7 +36,6 @@ export const env = createEnv({
       .optional()
       .transform((v) => (v ? `https://${v}` : undefined)),
     PORT: z.coerce.number().default(3000),
-    POSTHOG_API_KEY: z.string().min(1),
   },
   runtimeEnv: {
     AUTH_DISCORD_ID: process.env.AUTH_DISCORD_ID,
@@ -45,7 +46,7 @@ export const env = createEnv({
     PORT: process.env.PORT,
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_PREFIX: process.env.DATABASE_PREFIX,
-    POSTHOG_API_KEY: process.env.POSTHOG_API_KEY,
+    NEXT_PUBLIC_POSTHOG_API_KEY: process.env.NEXT_PUBLIC_POSTHOG_API_KEY,
   },
   skipValidation:
     !!process.env.CI ||
