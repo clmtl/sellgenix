@@ -1,5 +1,5 @@
 {
-  "name": "@kopenkinda/db",
+  "name": "@sellgenix/db",
   "version": "0.1.0",
   "private": true,
   "main": "./index.ts",
@@ -18,9 +18,9 @@
     "drizzle-orm": "^0.28.6"
   },
   "devDependencies": {
-    "@kopenkinda/eslint-config": "workspace:*",
-    "@kopenkinda/prettier-config": "workspace:*",
-    "@kopenkinda/tsconfig": "workspace:*",
+    "@sellgenix/eslint-config": "workspace:*",
+    "@sellgenix/prettier-config": "workspace:*",
+    "@sellgenix/tsconfig": "workspace:*",
     "dotenv-cli": "^7.3.0",
     "drizzle-kit": "^0.19.13",
     "eslint": "^8.52.0",
@@ -30,8 +30,8 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@kopenkinda/eslint-config/base"
+      "@sellgenix/eslint-config/base"
     ]
   },
-  "prettier": "@kopenkinda/prettier-config"
+  "prettier": "@sellgenix/prettier-config"
 }

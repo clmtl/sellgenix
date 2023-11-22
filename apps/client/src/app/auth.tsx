@@ -1,6 +1,6 @@
 import { Avatar, Button, Card, Flex, Text } from "@radix-ui/themes";
 
-import { auth, signIn, signOut } from "@kopenkinda/auth";
+import { auth, signIn, signOut } from "@sellgenix/auth";
 
 export async function AuthShowcase() {
   const session = await auth();

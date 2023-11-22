@@ -4,9 +4,8 @@
 import Discord from "@auth/core/providers/discord";
 import type { DefaultSession } from "@auth/core/types";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import { db, tableCreator } from "@sellgenix/db";
 import NextAuth from "next-auth";
-
-import { db, tableCreator } from "@kopenkinda/db";
 
 export type { Session } from "next-auth";
 export type EnabledProviders = "discord";

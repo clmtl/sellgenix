@@ -1,5 +1,5 @@
 {
-  "extends": "@kopenkinda/tsconfig/base.json",
+  "extends": "@sellgenix/tsconfig/base.json",
   "compilerOptions": {
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
   },

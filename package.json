@@ -19,7 +19,7 @@
     "typecheck": "turbo typecheck"
   },
   "dependencies": {
-    "@kopenkinda/prettier-config": "workspace:*",
+    "@sellgenix/prettier-config": "workspace:*",
     "@turbo/gen": "^1.10.16",
     "prettier": "^3.0.3",
     "turbo": "^1.10.16",
@@ -30,5 +30,5 @@
       "@auth/core": "0.18.0"
     }
   },
-  "prettier": "@kopenkinda/prettier-config"
+  "prettier": "@sellgenix/prettier-config"
 }

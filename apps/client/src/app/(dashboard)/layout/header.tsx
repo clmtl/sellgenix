@@ -1,7 +1,7 @@
 import { Avatar, Card, Flex, IconButton, Text } from "@radix-ui/themes";
 import { IconLogout } from "@tabler/icons-react";
 
-import { auth, signOut } from "@kopenkinda/auth";
+import { auth, signOut } from "@sellgenix/auth";
 
 export const Header = async () => {
   const session = await auth();

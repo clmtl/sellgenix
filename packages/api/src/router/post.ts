@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { desc, eq, schema } from "@kopenkinda/db";
+import { desc, eq, schema } from "@sellgenix/db";
 
 import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 

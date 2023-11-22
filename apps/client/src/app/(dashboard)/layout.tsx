@@ -1,6 +1,6 @@
 import { Box, Flex } from "@radix-ui/themes";
 
-import { auth } from "@kopenkinda/auth";
+import { auth } from "@sellgenix/auth";
 
 import { Footer } from "./layout/footer";
 import { Header } from "./layout/header";

@@ -7,5 +7,5 @@ import { mysqlTableCreator } from "drizzle-orm/mysql-core";
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
 export const mySqlTable = mysqlTableCreator(
-  (name) => `${process.env.DATABASE_PREFIX ?? "kopenkinda_"}${name}`,
+  (name) => `${process.env.DATABASE_PREFIX ?? "sellgenix_"}${name}`,
 );
