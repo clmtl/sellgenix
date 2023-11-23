@@ -123,6 +123,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: "add",
+        path: "packages/{{ name }}/.prettierignore",
+        template: "dist/",
+      },
+      {
+        type: "add",
         path: "packages/{{ name }}/index.ts",
         template: "export * from './src';",
       },
