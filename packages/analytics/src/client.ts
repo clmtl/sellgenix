@@ -1,7 +1,14 @@
-import { env } from "@sellgenix/env";
 import { PostHog } from "posthog-node";
 
+import { env } from "@sellgenix/env";
+
 import type { Events } from "./events";
+
+const client = new PostHog(env.NEXT_PUBLIC_POSTHOG_API_KEY, {
+  flushAt: 1,
+  flushInterval: 0,
+  fetch: (...args) => fetch(...args),
+});
 
 export const analytics = {
   track<T extends keyof Events>(
@@ -11,16 +18,10 @@ export const analytics = {
       properties: Events[T];
     },
   ) {
-    const client = new PostHog(env.POSTHOG_API_KEY, {
-      flushAt: 1,
-      flushInterval: 0,
-    });
-    client.debug(true);
     client.capture({
       distinctId: payload.distinctId,
       event: key,
       properties: payload.properties,
     });
-    client.shutdown();
   },
 };

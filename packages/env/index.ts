@@ -1,13 +1,6 @@
 // @ts-check
 import { createEnv } from "@t3-oss/env-nextjs";
-import * as dotenv from "dotenv";
 import { z } from "zod";
-
-if (process.env.DATABASE_URL === undefined) {
-  dotenv.config({
-    path: "../../.env",
-  });
-}
 
 export const env = createEnv({
   client: {
