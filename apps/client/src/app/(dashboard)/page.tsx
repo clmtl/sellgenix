@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@radix-ui/themes";
-import { IconLoadBalancer, IconLoader } from "@tabler/icons-react";
+import { IconLoader } from "@tabler/icons-react";
 
 import { api } from "~/utils/api/react";
 
