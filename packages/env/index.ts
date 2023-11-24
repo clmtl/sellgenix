@@ -1,15 +1,11 @@
+// @ts-check
 import { createEnv } from "@t3-oss/env-nextjs";
-import * as dotenv from "dotenv";
 import { z } from "zod";
 
-if (process.env.DATABASE_URL === undefined) {
-  dotenv.config({
-    path: "../../.env",
-  });
-}
-
 export const env = createEnv({
-  client: {},
+  client: {
+    NEXT_PUBLIC_POSTHOG_API_KEY: z.string(),
+  },
   server: {
     AUTH_DISCORD_ID: z.string().min(1),
     AUTH_DISCORD_SECRET: z.string().min(1),
@@ -43,6 +39,7 @@ export const env = createEnv({
     PORT: process.env.PORT,
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_PREFIX: process.env.DATABASE_PREFIX,
+    NEXT_PUBLIC_POSTHOG_API_KEY: process.env.NEXT_PUBLIC_POSTHOG_API_KEY,
   },
   skipValidation:
     !!process.env.CI ||

@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@sellgenix/analytics": "workspace:*",
     "@sellgenix/auth": "workspace:*",
     "@sellgenix/db": "workspace:*",
     "@sellgenix/env": "workspace:*",
